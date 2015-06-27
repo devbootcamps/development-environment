@@ -1,0 +1,11 @@
+# Ignore vim swap files.
+*.swp
+
+# Vagrant file
+.vagrant
+
+# Cookbooks
+/cookbooks
+
+# Temporary files
+/tmp
