@@ -65,6 +65,7 @@ Vagrant.configure(2) do |config|
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
 
     chef.add_recipe "apt"
+    chef.add_recipe "ntp"
     chef.add_recipe "nodejs"
     chef.add_recipe "ruby_build"
     chef.add_recipe "rbenv::user"
@@ -72,6 +73,7 @@ Vagrant.configure(2) do |config|
     chef.add_recipe "vim"
     chef.add_recipe "mysql::server"
     chef.add_recipe "mysql::client"
+    chef.add_recipe "oh_my_zsh"
 
     # Install Ruby 2.2.1 and Bundler
     # Set an empty root password for MySQL to make things simple
@@ -90,6 +92,17 @@ Vagrant.configure(2) do |config|
       },
       mysql: {
         server_root_password: ''
+      },
+      oh_my_zsh: {
+        users: [{
+          login: 'vagrant',
+          theme: 'pygmalion',
+          plugins: ['gem', 'git', 'rails3', 'redis-cli', 'ruby'],
+          home: '/home/vagrant'
+        }]
+      },
+      ntp: {
+	servers: %w(0.nl.pool.ntp.org 1.nl.pool.ntp.org 2.nl.pool.ntp.org 3.nl.pool.ntp.org)
       }
     }
   end
