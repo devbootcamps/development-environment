@@ -17,6 +17,8 @@ SITE
       yum-epel (>= 0.0.0)
     homebrew (1.13.0)
       build-essential (>= 2.1.2)
+    motd (0.6.2)
+      chef_handler (>= 0.0.0)
     mysql (5.6.3)
       yum-mysql-community (>= 0.0.0)
     nodejs (2.4.0)
@@ -51,9 +53,17 @@ GIT
     oh_my_zsh (0.0.1)
       git (>= 0.0.0)
 
+PATH
+  remote: site-cookbooks/development_bootcamp
+  specs:
+    development_bootcamp (0.0.1)
+      motd (>= 0.0.0)
+
 DEPENDENCIES
   apt (>= 0)
   build-essential (>= 0)
+  development_bootcamp (>= 0)
+  motd (>= 0)
   mysql (= 5.6.3)
   nodejs (>= 0)
   ntp (>= 0)

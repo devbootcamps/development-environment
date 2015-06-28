@@ -9,3 +9,6 @@ cookbook 'rbenv', git: 'https://github.com/aminin/chef-rbenv'
 cookbook 'vim'
 cookbook 'oh_my_zsh', git: 'https://github.com/shingara/oh-my-zsh-chef.git'
 cookbook 'ntp'
+cookbook 'motd'
+
+cookbook 'development_bootcamp', path: 'site-cookbooks/development_bootcamp'

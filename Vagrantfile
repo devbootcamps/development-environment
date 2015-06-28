@@ -13,6 +13,7 @@ Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/trusty64"
+  config.vm.hostname = "developmentbootcamp"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -74,6 +75,7 @@ Vagrant.configure(2) do |config|
     chef.add_recipe "mysql::server"
     chef.add_recipe "mysql::client"
     chef.add_recipe "oh_my_zsh"
+    chef.add_recipe "development_bootcamp"
 
     # Install Ruby 2.2.1 and Bundler
     # Set an empty root password for MySQL to make things simple
