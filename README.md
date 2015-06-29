@@ -20,6 +20,32 @@ Bootcamp][development_bootcamp] program.
 7. Go to `/vagrant` where your files are:
   - `cd /vagrant`
 
+## Troubleshooting
+
+#### Provisioning Fails
+
+Sometimes mounting the local filesystem breaks and you will see
+something like this when you run `vagrant provision`:
+
+```bash
+⇒  vagrant provision
+==> default: Installing Chef cookbooks with Librarian-Chef...
+==> default: Running provisioner: chef_solo...
+==> default: Detected Chef (latest) is already installed
+\e31m]Shared folders that Chef requires are missing on the virtual machine.
+This is usually due to configuration changing after already booting the
+machine. The fix is to run a `vagrant reload` so that the proper shared
+folders will be prepared and mounted on the VM.\e0m]
+```
+
+This can be temporarily resolved by removing the mount cache with the
+following command:
+
+```bash
+$ rm .vagrant/machines/default/virtualbox/synced_folders
+$ vagrant reload
+```
+
 [development_bootcamp]: https://www.developmentbootcamp.nl
 [vagrant]: http://www.vagrantup.com/downloads.html
 [virtual_box]: https://www.virtualbox.org/wiki/Downloads

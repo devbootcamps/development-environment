@@ -90,7 +90,9 @@ Vagrant.configure(2) do |config|
           global: "2.2.1",
           gems: {
             "2.2.1" => [
-              { name: "bundler" }
+              { name: "bundler" },
+              { name: 'pry' },
+              { name: 'rails' }
             ]
           }
         }]
