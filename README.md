@@ -20,7 +20,7 @@ Alternatively, go to Applications -> Utilities -> Terminal
 Go to Start menu → All Programs → Accessories → Command Prompt.
 
 ### Linux
-Go to Start menu → All Programs → Accessories → Command Prompt.
+Go to Start menu → All Programs → Accessories → Command Prompt. Can't find it? Ask us!
 
 ## About Vagrant
 Vagrant is a tool to create standardized virtual machines. A virtual machine is a way to emulate a computer within your computer. This allows us to make sure that everyone uses the exact same environment, which will be a Linux system.
@@ -45,6 +45,7 @@ On Mac OS and Linux: type `vagrant ssh`. This will log you into the machine.
 On Windows, you need to do more:
 
 In the terminal, type `vagrant ssh`. This will NOT log you into the machine. But it will show you a hostname and a port number. We’ll use those in a moment.
+
 1. Download [putty.exe](http://www.google.com/url?q=http%3A%2F%2Fthe.earth.li%2F~sgtatham%2Fputty%2Flatest%2Fx86%2Fputty.exe&sa=D&sntz=1&usg=AFQjCNGbHo_sOJUJFzgDZ8bOuOkV1gHnFQ) and run it
 
 2. Copy the hostname and port number from the terminal in the putty window. NB: you cannot use copy/paste here, so you’ll need to do this manually.
