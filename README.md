@@ -1,51 +1,51 @@
 # Development Environment for Development Bootcamp
 
-This is custom Ubuntu Linux setup for use during our [Development
-Bootcamp][development_bootcamp] program.
+# Installation Instructions for Monday
+## Please start with the first two steps:
+1. Installing VirtualBox: https://www.virtualbox.org/wiki/Downloads
+2. Installing Vagrant: http://www.vagrantup.com/downloads.html
+3. Download the Vagrantfile: https://raw.githubusercontent.com/devbootcamps/development-environment/master/simple-setup/Vagrantfile
 
-## Installation Steps
+Make sure to put the Vagrantfile in a directory called devbootcamp, preferably in your user’s home directory. Under windows, this will normally be `C:\Users\YourUsername\`. So the new directory will be `C:\Users\YourUsername\devbootcamp`.
 
-1. Install [Vagrant][vagrant]
-2. Install [VirtualBox][virtual_box]
-3. Open your Terminal and install the necessary Vagrant plugins:
-  - `vagrant plugin install vagrant-vbguest`
-  - `vagrant plugin install vagrant-librarian-chef-nochef`
-4. Clone this repository on your local machine:
-  - `git clone https://github.com/devbootcamps/development-environment.git devbootcamp`
-  - `cd devbootcamp`
-5. Start the environment:
-  - `vagrant up`
-6. Connect to the environment via SSH:
-  - `vagrant ssh`
-7. Go to `/vagrant` where your files are:
-  - `cd /vagrant`
+## Starting the Terminal
+After installing Vagrant and VirtualBox, you will need to start a terminal. How to do this, depends on your system.
 
-## Troubleshooting
+### Starting Terminal.app on Mac OS
+Start Terminal by pressing cmd+space and typing `terminal`.
 
-#### Provisioning Fails
+Alternatively, go to Applications -> Utilities -> Terminal
 
-Sometimes mounting the local filesystem breaks and you will see
-something like this when you run `vagrant provision`:
+### Starting cmd.exe on Windows
+Go to Start menu → All Programs → Accessories → Command Prompt.
 
-```bash
-⇒  vagrant provision
-==> default: Installing Chef cookbooks with Librarian-Chef...
-==> default: Running provisioner: chef_solo...
-==> default: Detected Chef (latest) is already installed
-\e31m]Shared folders that Chef requires are missing on the virtual machine.
-This is usually due to configuration changing after already booting the
-machine. The fix is to run a `vagrant reload` so that the proper shared
-folders will be prepared and mounted on the VM.\e0m]
-```
+### Linux
+Go to Start menu → All Programs → Accessories → Command Prompt.
 
-This can be temporarily resolved by removing the mount cache with the
-following command:
+## About Vagrant
+Vagrant is a tool to create standardized virtual machines. A virtual machine is a way to emulate a computer within your computer. This allows us to make sure that everyone uses the exact same environment, which will be a Linux system.
 
-```bash
-$ rm .vagrant/machines/default/virtualbox/synced_folders
-$ vagrant reload
-```
+You will need to type some terminal commands now. After the workshops on Monday, most of this should be clear. For now, try to follow the instructions and don’t worry too much :)
 
-[development_bootcamp]: https://www.developmentbootcamp.nl
-[vagrant]: http://www.vagrantup.com/downloads.html
-[virtual_box]: https://www.virtualbox.org/wiki/Downloads
+### Moving into the right folder
+In your terminal application, type `cd devbootcamp` and press Enter. This should move you into the directory where you downloaded your Vagrantfile. To check this:
+
+- On Linux and Mac OS, type `ls` and press Enter. You should see the Vagrantfile listed.
+- On Windows, type `dir` and press Enter. You should see the Vagrantfile listed.
+
+If you don’t see the Vagrantfile listed, ask for help :)
+
+## Creating and starting a vagrant box
+Now type `vagrant up` and press Enter. You should see something like “Bringing machine up..” and then a lot of scrolling text. This will take a while; go get a cup of coffee! The next time you run this, it should be faster.
+
+### Logging in to the Vagrant box with Mac OS or Linux
+On Mac OS and Linux: type `vagrant ssh`. This will log you into the machine.
+
+### Logging in to the Vagrant box with Windows
+On Windows, you need to do more:
+
+In the terminal, type `vagrant ssh`. This will NOT log you into the machine. But it will show you a hostname and a port number. We’ll use those in a moment.
+1. Download putty.exe and run it
+2. Copy the hostname and port number from the terminal in the putty window. NB: you cannot use copy/paste here, so you’ll need to do this manually.
+3. In putty, click “open”. A new window will be shown. It will ask you about the server identity. Click “yes”.
+4. A new, black window will ask you to login. You are now logging in to the Linux machine. User: vagrant ,  Password vagrant
