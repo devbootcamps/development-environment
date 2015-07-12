@@ -66,6 +66,9 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision  :chef_solo do |chef|
+
+    chef.log_level = ENV.fetch("CHEF_LOG", "info").downcase.to_sym
+
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
 
     chef.add_recipe "apt"
