@@ -4,7 +4,6 @@
 ## Please start with the first two steps:
 1. Installing VirtualBox: https://www.virtualbox.org/wiki/Downloads
 2. Installing Vagrant: http://www.vagrantup.com/downloads.html
-3. Download the Vagrantfile: https://raw.githubusercontent.com/devbootcamps/development-environment/master/simple-setup/Vagrantfile
 
 Make sure to put the Vagrantfile in a directory called devbootcamp, preferably in your user’s home directory. Under windows, this will normally be `C:\Users\YourUsername\`. So the new directory will be `C:\Users\YourUsername\devbootcamp`.
 
