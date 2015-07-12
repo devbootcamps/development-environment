@@ -45,7 +45,7 @@ On Mac OS and Linux: type `vagrant ssh`. This will log you into the machine.
 On Windows, you need to do more:
 
 In the terminal, type `vagrant ssh`. This will NOT log you into the machine. But it will show you a hostname and a port number. We’ll use those in a moment.
-1. Download putty.exe and run it
+1. Download [putty.exe](http://www.google.com/url?q=http%3A%2F%2Fthe.earth.li%2F~sgtatham%2Fputty%2Flatest%2Fx86%2Fputty.exe&sa=D&sntz=1&usg=AFQjCNGbHo_sOJUJFzgDZ8bOuOkV1gHnFQ) and run it
 2. Copy the hostname and port number from the terminal in the putty window. NB: you cannot use copy/paste here, so you’ll need to do this manually.
 3. In putty, click “open”. A new window will be shown. It will ask you about the server identity. Click “yes”.
 4. A new, black window will ask you to login. You are now logging in to the Linux machine. User: vagrant ,  Password vagrant
