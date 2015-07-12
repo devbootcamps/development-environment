@@ -4,6 +4,12 @@
 ## Please start with the first two steps:
 1. Installing VirtualBox: https://www.virtualbox.org/wiki/Downloads
 2. Installing Vagrant: http://www.vagrantup.com/downloads.html
+3. Download the vagrant environment:
+   https://github.com/devbootcamps/development-environment/archive/v0.2.zip
+4. unpack it in your home folder, and make sure it is called devbootcamp
+5. Go into your terminal or command prompt and install some plugins with
+   the following command: `vagrant plugin install vagrant-librarian-chef-nochef`
+6. run `vagrant up`
 
 Make sure to put the Vagrantfile in a directory called devbootcamp, preferably in your user’s home directory. Under windows, this will normally be `C:\Users\YourUsername\`. So the new directory will be `C:\Users\YourUsername\devbootcamp`.
 
