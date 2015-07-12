@@ -36,6 +36,8 @@ In your terminal application, type `cd devbootcamp` and press Enter. This should
 If you don’t see the Vagrantfile listed, ask for help :)
 
 ## Creating and starting a vagrant box
+Install required plugins for vagrant:
+Type `vagrant plugin install vagrant-librarian-chef-nochef` and press Enter.
 Now type `vagrant up` and press Enter. You should see something like “Bringing machine up..” and then a lot of scrolling text. This will take a while; go get a cup of coffee! The next time you run this, it should be faster.
 
 ### Logging in to the Vagrant box with Mac OS or Linux
