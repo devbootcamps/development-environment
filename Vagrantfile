@@ -73,6 +73,7 @@ Vagrant.configure(2) do |config|
 
     chef.add_recipe "apt"
     chef.add_recipe "ntp"
+    chef.add_recipe "development_bootcamp::libffi"
 
 # This doesn't work on the network due to keyservers, install package manually
 #    chef.add_recipe "nodejs"
