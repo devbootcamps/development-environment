@@ -14,6 +14,7 @@ else
 fi
 
 echo "Installing necessary plugins..."
+vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-librarian-chef-nochef
 
 echo "Creating the bootcamp folder"
