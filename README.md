@@ -21,9 +21,9 @@ capable of running everything we need.
 
 ### Instructions for Mac (Windows below)
 
-[Download][release] the Codaisseur Vagrant environment
+[Download and install][git-install-mac] Git for Mac OSX.
 
-Now [Download and install][git-install-mac] Git for Mac OSX.
+Now, [download][release] the Codaisseur Vagrant environment
 
 Double-click the downloaded .zip file to unpack it
 
