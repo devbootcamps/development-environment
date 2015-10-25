@@ -23,6 +23,8 @@ capable of running everything we need.
 
 [Download][release] the Codaisseur Vagrant environment
 
+Now [Download and install][git-install-mac] Git for Mac OSX.
+
 Double-click the downloaded .zip file to unpack it
 
 ![unzip][unzip-mac]
@@ -222,4 +224,5 @@ You can get out of the Vagrant environment by typing `exit`, then
 [terminal-mac]: http://cd.sseu.re/2015_10_23_14_39_07_ccba9.jpg
 [vagrant-setup-mac]: http://cd.sseu.re/2015_10_23_14_45_43_stkbc.jpg
 [vagrant-welcome-mac]: http://cd.sseu.re/2015_10_23_17_57_53_n6n8m.jpg
+[git-install-mac]: http://git-scm.com/download/mac
 
